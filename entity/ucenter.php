@@ -46,14 +46,20 @@ include("../functions/NightShift.php");
 					<a onclick="backtop(); return false" class="ex-dnavbar-userbox-descunderunfb" href="#">返回顶部 ▲ </a>&#12288;<a onclick="exit(); return false" class="ex-dnavbar-userbox-descunderunfb" title="戳一下就退出哦w">注销 ></a>
 				</div>
 			</div>
-			<a href="index.php">
-				<div id="appfixbox">
+			<div id="appfixbox">
+				<a href="index.php">
 					<div class="ex-dnavbar-appbox" title="接好任务啊~">
 						<img src="../res/icons/bar/ic_task.png"/>
 						<div class="ex-dnavbar-appbox-text">主页</div>
 					</div>
-				</div>
-			</a>
+				</a>
+				<a href="bill.php">
+					<div class="ex-dnavbar-appbox" title="闷声才能发大财">
+					<img src="../res/icons/bar/ic_files.png"/>
+						<div class="ex-dnavbar-appbox-text">账务</div>
+					</div>
+				</a>
+			</div>			
 		</div>
 		<!--导航栏结束 -->
 		<!--退出提示-->
@@ -118,68 +124,23 @@ include("../functions/NightShift.php");
 			<center id="helper" class="card">
 				<h2 class="fs-title">反馈与帮助中心<span style="font-size: 14px"> / Feedback</span></h2>
 				<h3 class="fs-subtitle">遇到使用中的问题，或者寻求帮助，可以联系我们</h3>
-				<h3 class="fs-subtitle" style="color: #bdbdbd">—————— 电脑部APP组 ——————</h3>
-				<center>
-					<div class="contact">
-						<p class="job">诸彦甫<span style="font-size: 12px"> / 项目执行负责人</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="寻求帮助"/>
-					</div>
-					<div class="contact">
-						<p class="job">谭天<span style="font-size: 12px"> / 双电对口主席</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="意见反馈"/>
-					</div>
-					<div class="contact">
-						<p class="job">张镜濠<br><span style="font-size: 12px">技术支持 半专业码农</s></span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="技术求助"/>
-					</div>
-				</center>
-				<h3 class="fs-subtitle" style="color: #bdbdbd;margin-top: 40px">—————— 主席团成员 ——————</h3>
-				<center>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-				</center>
-				<center>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-					<div class="contact">
-						<p class="job">虚位以待<span style="font-size: 12px"> / 管理员</span></p>
-						<input type="submit" name="contact1" class="btn raised blue" style="display:inline-block" value="留言或对话"/>
-					</div>
-				</center>
-				<h3 class="fs-subtitle" style="color: #bdbdbd;margin-top: 40px">—————— 或者 ——————</h3>
-				<center>
-					<input type="submit" name="contact1" class="btn raised orange" style="display:inline-block" value="来用户群讨论"/>
-					&#12288;
-					<input type="submit" name="contact1" class="btn raised green" style="display:inline-block" value="来Github提交issue" onclick="window.location.href = 'https://github.com/zhxsu/SUsage/wiki/%E5%B8%AE%E5%8A%A9%E4%B8%8E%E5%8F%8D%E9%A6%88%E4%B8%AD%E5%BF%83-%7C-Hints-&-Feedbacks'" />
-				</center>
+				<h3 class="fs-subtitle" style="color: #bdbdbd">—————— 用户群 ——————</h3>
+				<span>企鹅群：<a>XXXXXXXXX</a></span><br><br>
+				<span>这里是微信二维码</span><br><br>
+				<span>当然，遇到问题，也可以私聊群里的技术负责人员。</span><br><br>
+				<h3 class="fs-subtitle" style="color: #bdbdbd">—————— 或者 ——————</h3>
+				<input type="submit" name="contact1" class="btn raised green" style="display:inline-block" value="查看Github上的帮助" onclick="window.location.href = 'https://github.com/zhxsu/SUsage/wiki/%E5%B8%AE%E5%8A%A9%E4%B8%8E%E5%8F%8D%E9%A6%88%E4%B8%AD%E5%BF%83-%7C-Hints-&-Feedbacks'" /><br><br>
+				<span>建议每位新用户都查看。<br><br>
 			</center>
 		</article>
-
-<script src="../res/js/basic.js"></script>
-<script>
-function easteregg(){
-	if(event.altKey  &&  event.shiftKey  &&  event.keyCode == 71){
-		window.location.href = "about.html";
-	}
-}
-document.onkeydown = function(){easteregg();};
-</script>
-
-</body>
+		<script src="../res/js/basic.js"></script>
+		<script>
+		function easteregg(){
+			if(event.altKey  &&  event.shiftKey  &&  event.keyCode == 71){
+				window.location.href = "about.html";
+			}
+		}
+		document.onkeydown = function(){easteregg();};
+		</script>	
+	</body>
 </html>
