@@ -14,6 +14,7 @@ include("../functions/NightShift.php");
 		<link rel="shortcut icon" href="../res/icons/title/login_128X128.ico"/>
 		<link rel="stylesheet" href="../res/css/themes/Sinterface.css" />
 		<link rel="stylesheet" href="../res/css/modules/ex-united.css" />
+		<style>.card{left:0;margin-bottom: 30px;margin-top:120px;width:75%}</style>
 	</head>
 	<body>
 		<div class="ex-navbar-for-Desktop">
@@ -25,15 +26,8 @@ include("../functions/NightShift.php");
 				</div>
 				<div class="ex-dnavbar-userbox-usernamefixbox">
 					<p class="ex-dnacvar-userbox-username">
-						<?php 
-						echo $_SESSION['nickname']." , ";
-							if ($h<5) echo '该休息了';
-							else if ($h<11) echo '早上好呀';
-							else if ($h<13) echo '到中午了';
-							else if ($h<18) echo '下午好嘛';
-							else if ($h<23) echo '天黑了呢';
-							else echo '该休息了';
-						?>
+						<?php echo $_SESSION['nickname']; ?>
+						 , <?php $h=date('G');if ($h<5) echo '该休息了';else if ($h<11) echo '早上好呀';else if ($h<13) echo '到中午了';else if ($h<18) echo '下午好嘛';else if ($h<23) echo '天黑了呢';else echo '该休息了';?>
 					</p>
 				</div>
 				<div class="ex-dnavbar-userbox-descunderunfixbox">
@@ -48,6 +42,10 @@ include("../functions/NightShift.php");
 						<div class="ex-dnavbar-appbox-text">主页</div>
 					</div>
 				</a>
+					<div class="ex-dnavbar-appbox appbox-selected">
+					<img src="../res/icons/bar/ic_files.png"/>
+						<div class="ex-dnavbar-appbox-text">账务</div>
+					</div>
 		 	</div>
 		</div>
 		<!--退出提示-->
@@ -58,21 +56,42 @@ include("../functions/NightShift.php");
 		</div>
 		<article class="htmleaf-content">
 			<div class="subtitle"><h2 style="color:#4fb4f7">账务公开<span style="font-size: 14px"> / BillList</span></h2></div>
-				<center style="margin-top:120px">mu you kai fang<br>木&#12288;有&#12288;开&#12288;放</center>
-		</article>
-
-<script src="../res/js/basic.js"></script>
-<script src="../res/js/lrz.all.bundle.js"></script>
-<script src="../res/js/jquery-2.2.1.min.js"></script>
-<script src="../res/js/cropper.min.js"></script>
-<script src="../res/js/ucenter.js"></script>
-<script>
-function easteregg(){
-	if(event.altKey  &&  event.shiftKey  &&  event.keyCode == 71){
-		window.location.href = "about.html";
-	}
-}
-document.onkeydown = function(){easteregg();};
-</script>	
-</body>
+				<center class="card" style="height: 360px;overflow: scroll;">
+					<div id="earncircle" class="circle">
+						<div id="earn" class="billtotal">总收入<p>1989.5</p></div>
+					</div>
+					<div id="costcircle" class="circle">
+						<div id="cost" class="billtotal">总支出<p>817.0</p></div>
+					</div>
+					<div id="balcircle" class="circle">
+						<div id="balance" class="billtotal">结余<p>1172.5</p></div>
+					</div>
+					<div id="updatedate">最后更新：2016-08-17 3:01</div>
+				</center>
+				<center class="card" id="details">
+					<div>账务明细</div>
+					<div>你暂时没有权限查看。<a href="https://github.com/zhxsu/SUsage/wiki/%E5%B8%AE%E5%8A%A9%E4%B8%8E%E5%8F%8D%E9%A6%88%E4%B8%AD%E5%BF%83-%7C-Hints-&-Feedbacks#-%E8%B4%A6%E5%8A%A1%E5%85%AC%E5%BC%80">告诉我为什么?</a></div>
+				</center>
+		</article>	
+		<script src="../res/js/basic.js"></script>
+		<script src="../res/js/lrz.all.bundle.js"></script>
+		<script src="../res/js/jquery-2.2.1.min.js"></script>
+		<script src="../res/js/cropper.min.js"></script>
+		<script src="../res/js/ucenter.js"></script>
+		<script>
+		function easteregg(){
+			if(event.altKey  &&  event.shiftKey  &&  event.keyCode == 71){
+				window.location.href = "about.html";
+			}
+		}
+		document.onkeydown = function(){easteregg();};
+		window.onload=function()
+		{
+			$("#earncircle").addClass('animate rubberBand');
+			setTimeout("$('#costcircle').addClass('animate rubberBand');", 400); 
+			setTimeout("$('#balcircle').addClass('animate rubberBand');", 800); 
+			setTimeout("$('#updatedate').addClass('animate bounceIn');", 1200); 
+		}
+		</script>	
+	</body>
 </html>
